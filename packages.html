@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Packages</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style1.css">
+	<style>
+		.header {
+			text-align: center;
+			margin: 20px 0;
+		}
+
+		.header h2 {
+			font-size: 2.5rem;
+			color: #4a90e2;
+		}
+
+		#tab_header {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		#tab_header ul {
+			list-style: none;
+			padding: 0;
+			display: flex;
+		}
+
+		#tab_header ul li {
+			padding: 10px 20px;
+			margin: 0 5px;
+			cursor: pointer;
+			background-color: #f5f5f5;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		#tab_header ul li.is-active,
+		#tab_header ul li:hover {
+			background-color: #4a90e2;
+			color: #fff;
+		}
+
+		.container_item {
+			display: none;
+			background-color: #f9f9f9;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+		}
+
+		.container_item.is-active {
+			display: block;
+		}
+
+		.container_item ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.container_item ul li {
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.container_item ul li:last-child {
+			border-bottom: none;
+		}
+
+		.container_item .button {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<h2>Select a Package</h2>
+	</div>
+	<div id="tab_header">
+		<ul>
+			<li class="item is-active" data-option="1">Package 1</li>
+			<li class="item" data-option="2">Package 2</li>
+			<li class="item" data-option="3">Package 3</li>
+			<li class="item" data-option="4">Package 4</li>
+			<!-- Add more package tabs as needed -->
+		</ul>
+	</div>
+	<div id="tab_container" class="container">
+		<div class="container_item is-active" data-item="1">
+			<ul>
+				<li>SILVER</li>
+				<li>Duration: 1 slot (6 hour) morning/evening</li>
+				<li>2-3 location</li>
+				<li>2 different costumes</li>
+				<li>30 edited photos in soft copy</li>
+				<li>11 photos pre-wedding photobook</li>
+				<li>Signature pre-wedding photo frame [Quality-1]</li>
+				<li>Photo slide show video</li>
+				<li>Transport (optional)</li>
+				<li>Price: INR 10,000 (TRANSPORT EXCLUSIVE)</li>
+			</ul>
+			<div style="text-align: center;">
+				<a class="button is-primary" href="javascript:void(0);">Select</a>
+			</div>
+		</div>
+		<div class="container_item" data-item="2">
+			<ul>
+				<li>GOLD</li>
+				<li>Duration: 1 Day (24 hour) Stay provided</li>
+				<li>3-5 location</li>
+				<li>3 different costumes</li>
+				<li>40 edited photos in soft copy</li>
+				<li>21 photos pre-wedding photobook</li>
+				<li>Pre-wedding cinematic movie (length: 2 min)</li>
+				<li>Signature pre-wedding photo frame [Quality-2]</li>
+				<li>Transport (optional)</li>
+				<li>Price: INR 20,000 (TRANSPORT EXCLUSIVE)</li>
+			</ul>
+			<div style="text-align: center;">
+				<a class="button is-primary" href="javascript:void(0);">Select</a>
+			</div>
+		</div>
+		<div class="container_item" data-item="3">
+			<ul>
+				<li>DIAMOND</li>
+				<li>Duration: 2 Day (Weekend) (STAY PROVIDED)</li>
+				<li>6-7 location</li>
+				<li>7 different costumes <br>(2 OUTFITS PROVIDED BY US)</li>
+				<li>60 edited photos in soft copy</li>
+				<li>35 photos pre-wedding photobook</li>
+				<li>Pre-wedding cinematic movie (length: 2 min)</li>
+				<li>Signature pre-wedding photo frame [Quality-3]</li>
+				<li>Transport provided</li>
+				<li>Price: INR 50,000</li>
+			</ul>
+			<div style="text-align: center;">
+				<a class="button is-primary" href="javascript:void(0);">Select</a>
+			</div>
+		</div>
+		<div class="container_item" data-item="4">
+			<ul>
+				<li>PLATINUM</li>
+				<li>Duration: 3-4 Day (Weekend) Stay provided</li>
+				<li>8-10 location with different costumes</li>
+				<li>3 OUTFITS PROVIDED BY US</li>
+				<li>100 edited photos in soft copy</li>
+				<li>40 photos pre-wedding photobook</li>
+				<li>Pre-wedding cinematic movie (length: 5 min)</li>
+				<li>Signature pre-wedding photo frame [Quality-5]</li>
+				<li>Transport provided</li>
+				<li>Price: INR 80,000</li>
+			</ul>
+			<div style="text-align: center;">
+				<a class="button is-primary" href="javascript:void(0);">Select</a>
+			</div>
+		</div>
+		<!-- Add more package items as needed -->
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$('#tab_header ul li.item').on('click', function () {
+				var number = $(this).data('option');
+				$('#tab_header ul li.item').removeClass('is-active');
+				$(this).addClass('is-active');
+				$('#tab_container .container_item').removeClass('is-active');
+				$('div[data-item="' + number + '"]').addClass('is-active');
+			});
+
+			// Add event listener to select button
+			$('a.button.is-primary').on('click', function () {
+				var container = $(this).closest('.container_item');
+				var package_name = container.find('ul li:nth-child(1)').text();
+				var duration = container.find('ul li:nth-child(2)').text();
+				var locations = container.find('ul li:nth-child(3)').text();
+				var costumes = container.find('ul li:nth-child(4)').text();
+				var edited_photos = container.find('ul li:nth-child(5)').text();
+				var photobook_photos = container.find('ul li:nth-child(6)').text();
+				var cinematic_movie_length = container.find('ul li:nth-child(7)').text();
+				var photo_frame_quality = container.find('ul li:nth-child(8)').text();
+				var transport_provided = container.find('ul li:nth-child(9)').text();
+				var price = container.find('ul li:nth-child(10)').text().replace('Price: INR ', '');
+
+				// Send data to PHP page using AJAX
+				$.ajax({
+					type: "POST",
+					url: "packages.php",
+					data: {
+						package_name: package_name,
+						duration: duration,
+						locations: locations,
+						costumes: costumes,
+						edited_photos: edited_photos,
+						photobook_photos: photobook_photos,
+						cinematic_movie_length: cinematic_movie_length,
+						photo_frame_quality: photo_frame_quality,
+						transport_provided: transport_provided,
+						price: price
+					},
+					success: function () {
+						alert("Data sent successfully!");
+					},
+					error: function () {
+						alert("Failed to send data.");
+					}
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

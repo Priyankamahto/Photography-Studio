@@ -1,0 +1,15 @@
+body {
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+#tab_container .container_item {
+  display: none;
+}
+
+#tab_container .container_item.is-active {
+  display: block;
+}
+ul{ 
+ list-style-type:circle;
+ }
